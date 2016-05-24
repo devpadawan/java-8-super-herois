@@ -1,13 +1,5 @@
 package com.devpadawan.superherois;
 
-import static java.util.Comparator.comparingInt;
-
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import com.devpadawan.superherois.infra.Dados;
-import com.devpadawan.superherois.modelo.SuperHeroi;
-
 /*
  * Copyright (c) 2015 Josimar Silva
  * 
@@ -31,19 +23,17 @@ import com.devpadawan.superherois.modelo.SuperHeroi;
  */
 
 /**
- * @author Josimar Silva a.k.a devpadawan - josimaralves dot com at gmail dot
- *         com
+ * @author Josimar Silva a.k.a devpadawan - josimaralves dot com at gmail dot com
  * @since May 24, 2016
  */
-public class MainJava8 extends Main {
-
-	public static void main(final String[] args) {
-
-		final Set<SuperHeroi> superHerois = Dados.novo().carregarSuperHerois();
-
-		imprime("Todos os codinomes dos superherois");
-		superHerois.forEach(superHeroi -> System.out.println(superHeroi.getCodinome()));
-
+public abstract class Main {
+	
+	protected static void imprime(final String texto) {
+		System.out.println(texto);
+	}
+	
+	protected static void imprimeQuebraDeLinha() {
+		System.out.println("---------------------------------------");
 	}
 
 }

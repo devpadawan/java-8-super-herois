@@ -31,16 +31,18 @@ import com.devpadawan.superherois.modelo.SuperHeroi;
  * @author Josimar Silva a.k.a devpadawan - josimaralves dot com at gmail dot com
  * @since May 24, 2016
  */
-public class MainJava7 {
+public class MainJava7 extends Main {
 	
 	public static void main(final String[] args) {
 		
 		final Set<SuperHeroi> superHerois = Dados.novo().carregarSuperHerois();
 		
-		//Imprimir todos os codinomes dos superherois
+		imprime("Imprimir todos os codinomes dos superherois");
 		for (final SuperHeroi superHeroi : superHerois) {
 			System.out.println(superHeroi.getCodinome());
 		}
+		
+		imprimeQuebraDeLinha();
 		
 		//Ordenar todos pelo codinome
 		
