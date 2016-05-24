@@ -28,7 +28,7 @@ package com.devpadawan.superherois.modelo;
  */
 public enum Genero {
 
-	M("Masculino"), F("Feminico");
+	M("Masculino"), F("Feminino");
 
 	private final String descricao;
 
